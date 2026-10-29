@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Exe(コンソール) + WinForms: CLIでもGUIでも動くハイブリッド構成 -->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>OsuLazer2TaikoNauts</RootNamespace>
+    <AssemblyName>osuLazer2TaikoNauts</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- 単一exe化: dotnet publish -c Release だけで1ファイルになる -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- osu!lazer が使っている Realm のバージョンに近いものを指定すること -->
+    <PackageReference Include="Realm" Version="20.1.0" />
+  </ItemGroup>
+
+</Project>

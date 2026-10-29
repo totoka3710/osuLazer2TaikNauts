@@ -1,0 +1,36 @@
+# .NET ビルド出力・中間生成物
+[Bb]in/
+[Oo]bj/
+**/[Bb]in/
+**/[Oo]bj/
+
+# 設定ファイル（ローカルPCのパス情報を含むためGit管理対象外）
+config.json
+**/config.json
+*.tmp
+
+# パッケージ・ツールキャッシュ
+.dotnet-cli/
+.nuget-packages/
+packages/
+*.nupkg
+
+# Fody生成スキーマ
+FodyWeavers.xsd
+**/FodyWeavers.xsd
+
+# Pythonキャッシュ
+__pycache__/
+*.pyc
+
+# IDE・エディタ固有ファイル
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# OS固有の一時ファイル
+Thumbs.db
+Desktop.ini
+.DS_Store

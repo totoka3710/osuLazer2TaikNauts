@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>osuLazer2TaikoNauts</AssemblyName>
+    <RootNamespace>osuLazer2TaikoNauts</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RestorePackagesPath>$(MSBuildProjectDirectory)\.nuget-packages</RestorePackagesPath>
+    <NuGetAudit>false</NuGetAudit>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Realm" Version="20.1.0" />
+    <Compile Remove="realm_bridge/**/*.cs" />
+  </ItemGroup>
+</Project>
